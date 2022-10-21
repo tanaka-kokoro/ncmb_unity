@@ -10,15 +10,16 @@ jobs:
   - name: Doxygen Action
     uses: mattnotmitt/doxygen-action@1.9.4
     with:
-          doxyfile-path: ./Doxyfile
-          working-directory: .
+      doxyfile-path: ./Doxyfile
+      working-directory: .
+
   - name: Setup git
     env:
-        EMAIL: ${{ secrets.EMAIL }}
+      EMAIL: ${{ secrets.EMAIL }}
     run: |
       git config --global user.email "$EMAIL"
       git config --global user.name "tanaka-kokoro"
-      
+
   - name: Commit docs
     run: |
       if ! git diff --exit-code --quiet
@@ -28,11 +29,12 @@ jobs:
         git pull
         git push origin develop
       fi
+
   - name: zip docs
     run: zip -r docs.zip docs/
 
-    - name: Archive artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: docs
-        path: docs.zip
+  - name: Archive artifacts
+    uses: actions/upload-artifact@v2
+    with:
+      name: docs
+      path: docs.zip
