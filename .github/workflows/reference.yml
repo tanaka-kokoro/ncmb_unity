@@ -8,11 +8,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: |
-        ls ../
+        ls ../ncmb_unity/docs
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@1.9.4
       with:
-        doxyfile-path: '../docs/Doxygen'
+        doxyfile-path: '../ncmb_unity/docs/Doxygen'
 
     - name: Setup git
       env:
