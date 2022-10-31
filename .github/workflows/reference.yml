@@ -10,7 +10,7 @@ jobs:
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@1.9.4
       with:
-        doxyfile-path: 'docs/Doxygen'
+        doxyfile-path: '../../docs/Doxygen'
 
     - name: Setup git
       env:
