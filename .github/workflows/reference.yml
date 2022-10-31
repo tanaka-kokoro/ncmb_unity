@@ -29,8 +29,7 @@ jobs:
         then
           git add .
           git commit -m "Auto replace reference files"
-          git pull
-          git push origin develop
+          git push
         fi
 
     - name: zip docs
