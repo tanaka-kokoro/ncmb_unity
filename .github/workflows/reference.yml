@@ -11,7 +11,7 @@ jobs:
       uses: mattnotmitt/doxygen-action@1.9.4
       with:
         working-directory: .
-        doxyfile-path: ./docs/Doxyfile
+        doxyfile-path: ./Doxyfile
 
     - name: Setup git
       env:
