@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: |
-        ls ../docs/Doxygen
+        ls ../docs
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@1.9.4
       with:
