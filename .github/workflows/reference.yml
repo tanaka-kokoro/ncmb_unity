@@ -7,13 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: |
-        pwd
-        ls ../
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@1.9.4
       with:
-        doxyfile-path: '../../docs/Doxygen'
+        doxyfile-path: '../docs/Doxygen'
 
     - name: Setup git
       env:
