@@ -11,7 +11,7 @@ jobs:
       uses: mattnotmitt/doxygen-action@1.9.4
       with:
         doxyfile-path: 'docs/Doxyfile'
-        working-directory: 'ncmb_unity/'
+        working-directory: '.'
 
     - name: Setup git
       env:
