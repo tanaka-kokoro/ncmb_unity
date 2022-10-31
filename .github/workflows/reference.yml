@@ -7,12 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: |
-        ls ../ncmb_unity/docs
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@1.9.4
       with:
-        doxyfile-path: '../ncmb_unity/docs/Doxygen'
+        working-directory: .
+        doxyfile-path: ./docs/Doxyfile
 
     - name: Setup git
       env:
