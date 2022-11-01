@@ -27,7 +27,7 @@ using System.Text;
 namespace NCMB
 {
 	/// <summary>
-	/// アクセス制御を操作するクラスです。【テスト書き換え】
+	/// アクセス制御を操作するクラスです。
 	/// </summary>
 	public class NCMBACL
 	{
